@@ -1,0 +1,143 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #4A90E2, #50C9C3);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Card */
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Dropdowns */
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    background: #f9f9f9;
+    cursor: pointer;
+}
+
+/* Buttons */
+button {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.3s;
+}
+
+#startBtn {
+    background: #4CAF50;
+    color: white;
+}
+
+#startBtn:hover:not(:disabled) {
+    background: #45a049;
+}
+
+#stopBtn {
+    background: #FF5733;
+    color: white;
+}
+
+#stopBtn:hover:not(:disabled) {
+    background: #ff4418;
+}
+
+button:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Recording Indicator */
+#recordingIndicator {
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    animation: blink 1s infinite;
+    margin: 10px 0;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Result Display */
+p {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+span {
+    font-weight: bold;
+    color: #2c3e50;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Audio Player */
+audio {
+    width: 100%;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    select, button {
+        font-size: 14px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+}
